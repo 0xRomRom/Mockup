@@ -55,3 +55,19 @@ menuBar.addEventListener("click", (e) => {
   e.target.classList.add("selected");
   switchMenuTitle(e.target.textContent);
 });
+
+//Toggle tabs
+const tabs = document.querySelectorAll(".tabs");
+btns.forEach(button => {
+  button.addEventListener("click", () => {
+    const btn = button.textContent.replace(/\s+/g, '');
+    tabs.forEach(tab => {
+      tab.classList.add("hidden");
+      tab.classList.remove("slideIn");
+      if(tab.dataset.tab === btn) {
+        tab.classList.remove("hidden");
+        tab.classList.add("slideIn");
+      }
+    })
+  });
+})
