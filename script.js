@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
-    tabtitle.classList.add("hidden");
-    tabtitle.classList.add("slideIn");
-    tabtitle.classList.remove("hidden");
+  tabtitle.classList.add("hidden");
+  tabtitle.classList.add("slideIn");
+  tabtitle.classList.remove("hidden");
 });
 
 //Menu hover liught animation
@@ -22,30 +22,36 @@ const tabtitle = document.querySelector(".tabtitle");
 
 //Menu title switcher
 const btns = document.querySelectorAll(".cta-stl");
+const iEl = document.querySelectorAll("i");
 const switchMenuTitle = (e) => {
+  btns.forEach((btn) => {
+    btn.disabled = true;
+  });
+  tabtitle.disabled = true;
+  tabtitle.innerHTML = e;
+  tabtitle.classList.add("hidden");
+  tabtitle.classList.add("slideIn");
+  tabtitle.classList.remove("hidden");
+  setTimeout(() => {
+    tabtitle.classList.remove("slideIn");
     btns.forEach((btn) => {
-        btn.disabled = true;
+      btn.disabled = false;
     });
-    tabtitle.disabled = true;
-    tabtitle.innerHTML = e;
-    tabtitle.classList.add("hidden");
-    tabtitle.classList.add("slideIn");
-    tabtitle.classList.remove("hidden");
-    setTimeout(() => {
-        tabtitle.classList.remove("slideIn");
-        btns.forEach((btn) => {
-            btn.disabled = false;
-        });
-    }, 300)
+  }, 300);
 };
 
 const menuBar = document.querySelector(".inner-dashbar");
 menuBar.addEventListener("click", (e) => {
-    if(tabtitle.textContent === e.target.textContent) return;
-  if (+e.target.textContent.length > 20) return;
+  if (!e.target.dataset.btn) return;
   btns.forEach((btn) => {
     btn.classList.remove("selected");
-});
+  });
+
+  iEl.forEach((el) => {
+    el.classList.remove("translateX");
+  });
+
+  e.target.children[0].classList.add("translateX");
   e.target.classList.add("selected");
   switchMenuTitle(e.target.textContent);
 });

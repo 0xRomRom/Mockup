@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,800&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -36,8 +39,8 @@ body {
 
 .inner-dashbar::before {
   background: radial-gradient(
-    1000px circle at var(--mouse-x) var(--mouse-y),
-    rgba(181, 33, 194, 0.11),
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(181, 33, 194, 0.2),
     transparent 50%
   );
   border-radius: inherit;
@@ -76,7 +79,7 @@ body {
   height: 3rem;
   color: rgb(204, 197, 197);
   background-color: transparent;
-  border: 2px solid rgba(0, 0, 255, 0.384);
+  border: 1px solid rgba(98, 0, 255, 0.384);
   background-color: rgba(0, 0, 255, 0.144);
   background: linear-gradient(
     90deg,
@@ -100,7 +103,7 @@ body {
 .cta-stl:hover {
   color: white;
   background-color: transparent;
-  border: 2px solid rgba(0, 0, 255, 0.637);
+  border: 1px solid rgba(0, 0, 255, 0.637);
   background-color: rgba(0, 0, 255, 0.301);
   background: linear-gradient(
     90deg,
@@ -122,6 +125,10 @@ body {
 i {
   transition: all 0.3s ease-in-out;
   margin-left: 0.3rem;
+}
+
+.translateX {
+  transform: translateX(1rem);
 }
 
 .cta-stl:hover i {
@@ -156,8 +163,8 @@ i {
   text-align: start;
   position: absolute;
   top: 2rem;
+  user-select: none;
 }
-
 
 .slideIn {
   animation: slideIn 0.3s ease-in-out forwards;
@@ -168,14 +175,14 @@ i {
     transform: translateX(-1rem);
     opacity: 0.2;
   }
-  
+
   to {
     transform: translateX(0rem);
     opacity: 1;
   }
 }
 
-.tabs{
+.tabs {
   position: relative;
   width: 100%;
   user-select: none;

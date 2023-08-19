@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twan Bosman</title>
-    <link href="./stylesheet.css" rel="stylesheet">
+    <link href="./stylesheet.css" rel="stylesheet" />
     <script defer src="./script.js"></script>
     <script
-    src="https://kit.fontawesome.com/5f3c108898.js"
-    crossorigin="anonymous"
-  ></script>
-</head>
-<body>
+      src="https://kit.fontawesome.com/5f3c108898.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="favico.png" />
+  </head>
+  <body>
     <div class="app">
-        <div class="dashbar">
-            <div class="inner-dashbar card">
-                <button class="cta-stl selected">Home <i class="fa-solid fa-house"></i></button>
-                <button class="cta-stl">About Me <i class="fa-solid fa-person-circle-question"></i></button>
-                <button class="cta-stl">Video Gallery <i class="fa-solid fa-video"></i></button>
-                <button class="cta-stl">Photo Gallery <i class="fa-solid fa-camera"></i></button>
-                <button class="cta-stl">Previous Clients <i class="fa-solid fa-person-walking-luggage"></i></button>
-                <button class="cta-stl">Contact <i class="fa-solid fa-address-card"></i></button>
-            </div>
-            
+      <div class="dashbar">
+        <div class="inner-dashbar card">
+          <button class="cta-stl selected" data-btn="home">
+            Home <i class="fa-solid fa-house"></i>
+          </button>
+          <button class="cta-stl" data-btn="about">
+            About Me <i class="fa-solid fa-person-circle-question"></i>
+          </button>
+          <button class="cta-stl" data-btn="video">
+            Video Gallery <i class="fa-solid fa-video"></i>
+          </button>
+          <button class="cta-stl" data-btn="photo">
+            Photo Gallery <i class="fa-solid fa-camera"></i>
+          </button>
+          <button class="cta-stl" data-btn="clients">
+            Previous Clients <i class="fa-solid fa-person-walking-luggage"></i>
+          </button>
+          <button class="cta-stl" data-btn="contact">
+            Contact <i class="fa-solid fa-address-card"></i>
+          </button>
         </div>
-        <div class="content">
-            <div class="inner-content">
-                <h1 class="tabtitle">Home</h1>
-                <div class="home-tab tabs">
-                    <div class="videocontainer">
-                        <video autoplay loop class="videoframe">
-                            <source  src="./City.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                      
-                </div>
-                <div class="about-tab tabs"></div>
+      </div>
+      <div class="content">
+        <div class="inner-content">
+          <h1 class="tabtitle">Home</h1>
+          <div class="home-tab tabs">
+            <div class="videocontainer">
+              <video autoplay class="videoframe">
+                <source src="./City.mp4" type="video/mp4" />
+              </video>
             </div>
+          </div>
+          <div class="about-tab tabs"></div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
