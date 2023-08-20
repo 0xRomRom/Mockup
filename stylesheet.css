@@ -27,6 +27,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -175,6 +176,7 @@ i {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  padding-left: 1rem;
 }
 
 .tabtitle {
@@ -223,13 +225,23 @@ i {
   /* pointer-events: none;
   height: 100% !important; */
   max-height: 780px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.videoframe-main {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  margin-right: 10rem;;
 }
 
 .videocontainer {
   position: relative;
   width: 100% !important;
   /* pointer-events: none; */
-  height: 60% !important;
+  height: 75% !important;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -289,7 +301,6 @@ i {
   position: relative;
   width: 100%;
   height: 61%;
-  padding-right: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -303,7 +314,8 @@ i {
 
 .videotile {
 position: relative;
-width: 15rem;
+width: 31%;
+max-width: 16rem;
 height: 21.5rem;
 border: 1px solid rgba(255, 255, 255, 0.09);
 border-radius: 0.4rem;
@@ -319,7 +331,7 @@ cursor: pointer;
 .videotile::before {
   background: radial-gradient(
     500px circle at var(--mouse-x2) var(--mouse-y2),
-    rgba(138, 128, 128, 0.15),
+    rgba(137, 128, 138, 0.25),
     transparent 50%
   );
   border-radius: inherit;
@@ -364,8 +376,9 @@ cursor: pointer;
 
 .overlay-modal {
   width: 62rem;
-  height: 30rem;
+  height: 25rem;
   background-color: rgb(18, 19, 97);
+  background: linear-gradient(230deg,rgb(7, 7, 117), rgb(6, 6, 82), rgb(7, 7, 117), rgb(6, 6, 82));
   display: flex;
   justify-content: center;
   border-radius: 0.5rem;
@@ -390,7 +403,7 @@ cursor: pointer;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 3.5rem;
 }
 
 .prev-title {
